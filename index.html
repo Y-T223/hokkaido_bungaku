@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>北海道立文学館｜中島公園で出会う、北の文学の記憶</title>
+<meta name="description" content="札幌・中島公園の北海道立文学館。石川啄木、有島武郎、小林多喜二、三浦綾子ら北海道ゆかりの文学者の直筆原稿や愛用品を展示。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;700&family=Zen+Old+Mincho:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#1d3a33; --green-deep:#13271f; --brass:#b79a62; --brass-soft:#d8c79e;
+  --paper:#ebe3d0; --paper-2:#f3edde; --ink:#2a2620; --muted:#6b6354; --line:rgba(183,154,98,.45);
+  --serif:"Shippori Mincho","Zen Old Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--serif);color:var(--ink);background:var(--paper-2);line-height:1.95;font-size:16px;letter-spacing:.03em;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{width:min(1040px,100% - 40px);margin-inline:auto}
+section{padding:84px 0}
+h2{font-weight:500;font-size:clamp(24px,5.4vw,32px);letter-spacing:.14em;margin:0 0 12px;line-height:1.5}
+.sub{color:var(--muted);font-size:14px;margin:0 0 36px;letter-spacing:.12em}
+.rule{display:block;width:56px;height:1px;background:var(--brass);margin:18px 0 28px}
+
+/* HERO */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;color:#f4ecd8;background:var(--green-deep) url("images/1.jpg") center/cover no-repeat;padding:96px 0 72px}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(19,39,31,.92) 0%,rgba(19,39,31,.62) 55%,rgba(19,39,31,.35) 100%),linear-gradient(0deg,rgba(19,39,31,.85),transparent 40%)}
+.hero .wrap{position:relative}
+.tate{font-size:clamp(34px,10.5vw,64px);font-weight:500;letter-spacing:.14em;line-height:1.5;margin:0 0 22px;border-left:1px solid var(--brass);padding-left:clamp(14px,3vw,24px)}
+.hero-text{padding-top:6px;max-width:30em;min-width:0}
+.hero-name{margin:0 0 6px;font-size:15px;letter-spacing:.3em;color:var(--brass-soft)}
+.hero-lead{margin:0 0 30px;font-size:clamp(15px,3.8vw,17px);line-height:2.1}
+.btn{display:inline-block;text-decoration:none;font-family:var(--serif);font-size:15px;letter-spacing:.18em;padding:15px 30px;border:1px solid var(--brass);color:#f4ecd8;background:transparent;transition:background .25s,color .25s;-webkit-tap-highlight-color:transparent}
+.btn:hover,.btn:focus-visible{background:var(--brass);color:var(--green-deep);outline:none}
+.btn.solid{background:var(--green);border-color:var(--green);color:#f4ecd8}
+.btn.solid:hover,.btn.solid:focus-visible{background:var(--green-deep);color:var(--brass-soft)}
+.closed-note{position:absolute;right:0;bottom:0;font-size:12px;color:var(--brass-soft);letter-spacing:.15em}
+
+/* Intro / strengths */
+.intro p{max-width:34em}
+.pts{list-style:none;padding:0;margin:40px 0 0;display:grid;gap:0;border-top:1px solid var(--line)}
+.pts li{padding:24px 0;border-bottom:1px solid var(--line);display:grid;gap:4px}
+.pts b{font-weight:500;font-size:18px;letter-spacing:.1em;color:var(--green)}
+.pts span{font-size:15px;color:var(--muted)}
+
+/* Feature with photo */
+.feature{background:var(--paper)}
+.feature .grid{display:grid;gap:36px}
+.frame{position:relative;padding:10px;border:1px solid var(--brass);background:var(--paper-2)}
+.frame img{width:100%;aspect-ratio:4/3;object-fit:cover;background:#cfc5ad}
+.feature h3{font-weight:500;font-size:20px;letter-spacing:.1em;margin:0 0 8px}
+.feature p{margin:0 0 18px}
+.names{font-size:14px;color:var(--green);letter-spacing:.14em;border-top:1px solid var(--line);padding-top:14px}
+
+/* History */
+.history{background:var(--green);color:#efe6d0}
+.history h2{color:#f4ecd8}
+.history .sub{color:var(--brass-soft)}
+.hgrid{display:grid;gap:40px}
+.tl{list-style:none;margin:0;padding:0 0 0 22px;border-left:1px solid var(--brass)}
+.tl li{position:relative;padding:0 0 26px 14px}
+.tl li::before{content:"";position:absolute;left:-27px;top:11px;width:9px;height:9px;border-radius:50%;background:var(--brass);box-shadow:0 0 0 4px var(--green)}
+.tl .y{display:block;font-size:20px;color:var(--brass-soft);letter-spacing:.12em}
+.tl p{margin:0;font-size:15px;line-height:1.9;color:#e3dac4}
+.history .frame{background:var(--green-deep);border-color:var(--brass)}
+.history .frame img{aspect-ratio:3/4}
+
+/* Reviews */
+.rev{display:grid;gap:28px}
+.card{background:var(--paper);border:1px solid var(--line);padding:30px 24px;position:relative}
+.stars{color:var(--brass);letter-spacing:.2em;font-size:18px;margin:0 0 12px}
+.card p{margin:0 0 10px;font-size:15px;line-height:2}
+.card .who{font-size:12px;color:var(--muted);letter-spacing:.14em;margin:10px 0 0}
+
+/* Info */
+.info{background:var(--paper)}
+dl{margin:0;border-top:1px solid var(--line)}
+.row{display:grid;gap:2px;padding:18px 0;border-bottom:1px solid var(--line)}
+dt{font-size:13px;color:var(--brass);letter-spacing:.2em;font-weight:500;filter:brightness(.8)}
+dd{margin:0;font-size:16px}
+dd a{text-underline-offset:4px;word-break:break-all}
+.mapbox{margin-top:48px}
+.mapbox iframe{display:block;width:100%;height:340px;border:0;border:1px solid var(--brass);filter:sepia(.25) saturate(.85)}
+.mapbtn{text-align:center;margin-top:20px}
+
+/* Footer */
+footer{background:var(--green-deep);color:#efe6d0;padding:56px 0 48px;text-align:center}
+.sns{display:flex;justify-content:center;gap:18px;margin:0 0 26px;padding:0;list-style:none}
+.sns a{display:flex;width:48px;height:48px;align-items:center;justify-content:center;border:1px solid var(--brass);border-radius:50%;color:var(--brass-soft);transition:background .25s,color .25s}
+.sns a:hover,.sns a:focus-visible{background:var(--brass);color:var(--green-deep);outline:none}
+.sns svg{width:20px;height:20px;fill:currentColor}
+footer small{display:block;font-size:12px;letter-spacing:.14em;color:#b9ae94}
+
+@media (min-width:760px){
+  section{padding:120px 0}
+  .feature .grid{grid-template-columns:1.1fr 1fr;align-items:center;gap:64px}
+  .hgrid{grid-template-columns:1fr 340px;gap:72px;align-items:start}
+  .rev{grid-template-columns:1fr 1.25fr;align-items:start}
+  .pts{grid-template-columns:repeat(3,1fr);border-top:0;gap:32px}
+  .pts li{border:0;border-top:1px solid var(--brass);padding:20px 0}
+  .row{grid-template-columns:160px 1fr;gap:24px}
+  .mapbox iframe{height:440px}
+}
+@media (max-width:380px){ .wrap{width:calc(100% - 32px)} .btn{padding:14px 22px;letter-spacing:.12em} }
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <h1 class="tate">言葉が、<br>北へ渡る。</h1>
+    <div class="hero-text">
+      <p class="hero-name">北海道立文学館</p>
+      <p class="hero-lead">札幌・中島公園の緑の中に建つ文学館。<br>アイヌの口承文芸から現代まで、北海道の言葉の歩みを、直筆原稿とともにたどります。</p>
+      <a class="btn" href="#access">アクセスを見る</a>
+    </div>
+  </div>
+</header>
+
+<section class="intro">
+  <div class="wrap">
+    <h2>北の文学を、体系的に学ぶ</h2>
+    <span class="rule"></span>
+    <p>北海道ならびに北海道ゆかりの文学者に関する資料を幅広く収集・保存し、文学の魅力を伝える常設展と企画展を開催しています。教育普及活動や研究支援にも力を入れ、文学文化の振興に取り組んでいます。</p>
+    <ul class="pts">
+      <li><b>全国有数の所蔵資料</b><span>約26万〜35万点の資料を収集・保存しています。</span></li>
+      <li><b>専門的な閲覧サポート</b><span>資料の質と量に加え、閲覧を支える体制が評価されています。</span></li>
+      <li><b>公園の中という立地</b><span>中島公園の文化的な環境に恵まれた場所にあります。</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="feature">
+  <div class="wrap grid">
+    <div class="frame"><img src="images/2.jpg" alt="北海道立文学館の展示室" loading="lazy"></div>
+    <div>
+      <h2>手に触れた、作家の時間</h2>
+      <span class="rule"></span>
+      <h3>直筆原稿・愛用品・書簡・初版本</h3>
+      <p>石川啄木、有島武郎、小林多喜二、三浦綾子など、北海道ゆかりの文学者の資料を多数展示しています。</p>
+      <p>特別展・企画展は年に4〜5回ほど。「ムーミン展」「三浦綾子展」など多彩なテーマで、文学に詳しくない方も楽しめる内容です。</p>
+      <div class="names">石川啄木／有島武郎／小林多喜二／三浦綾子</div>
+    </div>
+  </div>
+</section>
+
+<section class="history">
+  <div class="wrap hgrid">
+    <div>
+      <h2>文学館のあゆみ</h2>
+      <p class="sub">一つの展覧会から始まりました</p>
+      <ol class="tl">
+        <li><span class="y">1966</span><p>「北海道文学展」を開催。多くの来場者が訪れ、資料収集と保存の重要性が認識されました。</p></li>
+        <li><span class="y">1967</span><p>任意団体「北海道文学館」を設立。</p></li>
+        <li><span class="y">1979</span><p>札幌市資料館の一部を借り、常設展示室を開設。</p></li>
+        <li><span class="y">1988</span><p>財団法人として法人化。</p></li>
+        <li><span class="y">1994</span><p>道立文学館の建設工事が完了。</p></li>
+        <li><span class="y">1995</span><p>北海道立文学館が正式に開館。</p></li>
+      </ol>
+    </div>
+    <div class="frame"><img src="images/3.jpg" alt="文学資料のイメージ" loading="lazy"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>訪れた方の声</h2>
+    <p class="sub">クチコミより</p>
+    <div class="rev">
+      <article class="card">
+        <p class="stars" aria-label="5段階評価の4">★★★★</p>
+        <p>中島公園の一角に建つ文学館。北海道の文学の歩みを概括した常設展示のほか、特別展示も随時開催されています。</p>
+        <p>この日の特別展は、絵本作家として知られる隆矢ななさんの原画展を観覧。親しみやすい絵柄と鮮やかな色彩が特徴の詩情あふれる作品が多数ならんでおり、ゆっくり楽しむことができました。</p>
+        <p>常設展の方も、北海道ゆかりの多数の作家、随筆家、詩人、歌人などが詳しく紹介されており、改めて北海道の風土と文学の結びつきの強さを感じさせてくれます。</p>
+        <p>緑豊かな公園の中にあって、とても雰囲気の良い文学館でした。</p>
+      </article>
+      <article class="card">
+        <p class="stars" aria-label="5段階評価の5">★★★★★</p>
+        <p>ここにはアイヌの口承文芸から明治〜大正〜戦前戦中戦後〜高度経済成長〜現代に至るまで北海道に関わる文学の歴史が詰まってました。</p>
+        <p>特に印象的だったのは明治期。幸田露伴さん、国木田独歩さん、石川啄木さん、葛西善蔵さん、岩野泡鳴さん。みな漂泊者。彷徨。</p>
+        <p>いずれも人生上の切迫した動機がきっかけなんだけれども、漂泊と彷徨の末に北海道へ辿り着き、そして理想郷を去っていく辛さ、それを文学にしていく姿がとても響く。</p>
+        <p>ブルースだ。これはブルースだ。</p>
+        <p>なんか辛くて、占いだったり、YouTubeとかの自己啓発の名言聴いてもしっくりこない人はここに来たらいいと思う。</p>
+        <p>文学館に来ておいてなんだけど、結局は言葉が巧くても、説得力は生き様の裏付けがないと響かない。明治期の漂泊と彷徨をしてきた文豪達の必死な生き様はとてもとても心に響く。</p>
+        <p>ぶん殴られる。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="info" id="access">
+  <div class="wrap">
+    <h2>ご利用案内</h2>
+    <span class="rule"></span>
+    <dl>
+      <div class="row"><dt>施設名</dt><dd>北海道立文学館</dd></div>
+      <div class="row"><dt>住所</dt><dd>札幌市中央区中島公園1番4号</dd></div>
+      <div class="row"><dt>定休日</dt><dd>月曜日（ただし、月曜日が祝日等の場合は開館）<br>年末年始（12月29日〜1月3日）</dd></div>
+      <div class="row"><dt>電話番号</dt><dd><a href="tel:0117481876">011-748-1876</a></dd></div>
+      <div class="row"><dt>メール</dt><dd><a href="mailto:bungaku@h-bungaku.or.jp">bungaku@h-bungaku.or.jp</a></dd></div>
+      <div class="row"><dt>公式サイト</dt><dd><a href="https://www.h-bungaku.or.jp/" target="_blank" rel="noopener">https://www.h-bungaku.or.jp/</a></dd></div>
+    </dl>
+    <div class="mapbox">
+      <iframe title="北海道立文学館の地図" src="https://maps.google.com/maps?q=%E5%8C%97%E6%B5%B7%E9%81%93%E7%AB%8B%E6%96%87%E5%AD%A6%E9%A4%A8%20%E6%9C%AD%E5%B9%8C%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E4%B8%AD%E5%B3%B6%E5%85%AC%E5%9C%921%E7%95%AA4%E5%8F%B7&hl=ja&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      <div class="mapbtn"><a class="btn solid" href="https://www.google.com/maps/search/?api=1&query=%E5%8C%97%E6%B5%B7%E9%81%93%E7%AB%8B%E6%96%87%E5%AD%A6%E9%A4%A8%20%E6%9C%AD%E5%B9%8C%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E4%B8%AD%E5%B3%B6%E5%85%AC%E5%9C%921%E7%95%AA4%E5%8F%B7" target="_blank" rel="noopener">Googleマップで開く</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <ul class="sns">
+    <li><a href="https://x.com/bungaku2018" target="_blank" rel="noopener" aria-label="X（旧Twitter）"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></li>
+    <li><a href="https://www.facebook.com/p/%E5%8C%97%E6%B5%B7%E9%81%93%E7%AB%8B%E6%96%87%E5%AD%A6%E9%A4%A8-100079970734077/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg></a></li>
+  </ul>
+  <small>© 北海道立文学館（紹介ページ）</small>
+</footer>
+</body>
+</html>
